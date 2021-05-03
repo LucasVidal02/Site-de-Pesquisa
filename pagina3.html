@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Pagina 3</title>
+</head>
+<script>
+    var vpergunta2;
+    function gravar() {
+        vpergunta2 = document.getElementsByName("pergunta2").value;
+        localStorage.pergunta2 = vpergunta2;
+    }
+</script>
+
+<body>
+    <form action="pagina4.html"></form>
+    <fieldset>
+        <div>
+            <p>Em relação a você, qual(is) habilidade(s) são pontos que podem melhorar?</p><br>
+            <input type="checkbox" name="pergunta2" value="Trabalho em Grupo">Trabalho em Grupo<br>
+            <input type="checkbox" name="pergunta2" value="Liderança">Liderança<br>
+            <input type="checkbox" name="pergunta2" value="Pontualidade">Pontualidade<br>
+            <input type="checkbox" name="pergunta2" value="Comunicação">Comunicação<br>
+            <input type="checkbox" name="pergunta2" value="Outro">Outro<br><br>
+        </div>
+    </fieldset>
+    </form>
+    <a href='pagina2.html'><button>Página Anterior</button></a>
+    <a href='pagina4.html'><button onclick="gravar()">Resultados</button></a>
+
+</body>
+
+</html>

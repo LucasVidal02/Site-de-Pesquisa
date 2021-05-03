@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Pagina 1</title>
+</head>
+<script>
+    var vnome, vperguntaaberta;
+
+    function gravar() {
+        vnome = document.getElementById("nomeusuario").value;
+        vperguntaaberta = document.getElementById("PerguntaAberta").value;
+        localStorage.nome = vnome;
+        localStorage.perguntaaberta = vperguntaaberta;
+    }
+</script>
+
+<body>
+    <div>
+        <h1>Site de Pesquisa</h1>
+        <p>Pesquisa de Auto Avaliação</p>
+    </div>
+
+
+    <form action="pagina4.html">
+        <fieldset>
+            <div>
+                <label for="nomeusuario">Insira seu Nome Completo:</label><br>
+                <input type="text" id="nomeusuario" name="nomeusuario" required /><br>
+                <br><br />
+            </div>
+
+            <div>
+                <p>Com o que você trabalha e o motivo da escolha?</p>
+                <label for="PerguntaAberta"></label>
+                <textarea id="PerguntaAberta" name="PerguntaAberta" rows="6" cols="50" required>
+  </textarea><br><br/>
+            </div>
+    </form>
+    </fieldset>
+    <a href='pagina2.html'><button onclick="gravar()">Próxima Página </button></a>
+
+</body>
+
+</html>

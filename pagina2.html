@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Pagina 2</title>
+</head>
+<script>
+
+    var vpergunta1;
+    function gravar() {
+        vpergunta1 = document.getElementsByName("pergunta1").value;
+        localStorage.pergunta1 = vpergunta1;
+    }
+</script>
+
+<body>
+    <form action="pagina4.html">
+        <fieldset>
+
+            <div>
+                <p>Qual habilidade você considera a mais importante em um estágiario?</p><br>
+
+                <input type="radio" name="pergunta1" value="Trabalho em Grupo">Trabalho em Grupo<br>
+                <input type="radio" name="pergunta1" value="Liderança">Liderança<br>
+                <input type="radio" name="pergunta1" value="Pontualidade">Pontualidade<br>
+                <input type="radio" name="pergunta1" value="Comunicação">Comunicação<br>
+                <input type="radio" name="pergunta1" value="HabeCop">Habilidades e Competências<br><br>
+            </div>
+        </fieldset>
+    </form>
+
+    <a href='index.html'><button>Página Anterior</button></a>
+    <a href='pagina3.html'><button onclick="gravar()">Próxima Página</button></a>
+</body>
+
+</html>
