@@ -10,23 +10,30 @@
         vpergunta2 = document.getElementsByName("pergunta2").value;
         localStorage.pergunta2 = vpergunta2;
     }
+
+    function checkboxrequired(){
+        document.getElementById("pergunta2").required = true;
+    }
 </script>
 
 <body>
     <form action="pagina4.html"></form>
     <fieldset>
         <div>
-            <p>Em relação a você, qual(is) habilidade(s) são pontos que podem melhorar?</p><br>
-            <input type="checkbox" name="pergunta2" value="Trabalho em Grupo">Trabalho em Grupo<br>
-            <input type="checkbox" name="pergunta2" value="Liderança">Liderança<br>
-            <input type="checkbox" name="pergunta2" value="Pontualidade">Pontualidade<br>
-            <input type="checkbox" name="pergunta2" value="Comunicação">Comunicação<br>
-            <input type="checkbox" name="pergunta2" value="Outro">Outro<br><br>
+            <p>Qual(is) tecnologias que você utiliza para desenvolver?</p><br>
+            <input type="checkbox" name="pergunta2" id="pergunta2" value="HTML">HTML<br>
+            <input type="checkbox" name="pergunta2" id="pergunta2" value="CSS">CSS<br>
+            <input type="checkbox" name="pergunta2" id="pergunta2" value="JavaScript">JavaScript<br>
+            <input type="checkbox" name="pergunta2" id="pergunta2" value="PHP">PHP<br>
+            <input type="checkbox" name="pergunta2" id="pergunta2" value="Python">Python<br>
+            <input type="checkbox" name="pergunta2" id="pergunta2" value="C#">C#<br>
+            <input type="checkbox" name="pergunta2" id="pergunta2" value="Java">Java<br>
+            <br>
         </div>
     </fieldset>
     </form>
     <a href='pagina2.html'><button>Página Anterior</button></a>
-    <a href='pagina4.html'><button onclick="gravar()">Resultados</button></a>
+    <a href='pagina4.html'><button onclick="gravar()" onclick="checkboxrequired()">Resultados</button></a>
 
 </body>
 

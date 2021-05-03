@@ -11,6 +11,10 @@
         vpergunta1 = document.getElementsByName("pergunta1").value;
         localStorage.pergunta1 = vpergunta1;
     }
+
+    function radiorequired() {
+        document.getElementById("pergunta1").required = true;
+    }
 </script>
 
 <body>
@@ -18,19 +22,17 @@
         <fieldset>
 
             <div>
-                <p>Qual habilidade você considera a mais importante em um estágiario?</p><br>
+                <p>De qual lado da aplicação você desenvolve?</p><br>
 
-                <input type="radio" name="pergunta1" value="Trabalho em Grupo">Trabalho em Grupo<br>
-                <input type="radio" name="pergunta1" value="Liderança">Liderança<br>
-                <input type="radio" name="pergunta1" value="Pontualidade">Pontualidade<br>
-                <input type="radio" name="pergunta1" value="Comunicação">Comunicação<br>
-                <input type="radio" name="pergunta1" value="HabeCop">Habilidades e Competências<br><br>
+                <input type="radio" name="pergunta1" id="pergunta1" value="Front-End">Front-End<br>
+                <input type="radio" name="pergunta1" id="pergunta1" value="Back-End">Back-End<br>
+                <input type="radio" name="pergunta1" id="pergunta1" value="Fullstack">Fullstack<br>
             </div>
         </fieldset>
     </form>
 
     <a href='index.html'><button>Página Anterior</button></a>
-    <a href='pagina3.html'><button onclick="gravar()">Próxima Página</button></a>
+    <a href='pagina3.html'><button onclick="gravar()" onclick="radiorequired()">Próxima Página</button></a>
 </body>
 
 </html>
